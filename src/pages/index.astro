@@ -8,8 +8,6 @@ import Layout from '@/layouts/Layout.astro'
     <h1>Welcome to <span class="text-gradient">EJPeace</span></h1>
     <p class="instructions">
       Kreatifitas tanpa batas bersama hiburan yang tak terlupakan.
-      <br />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to EJPeace" message above.
     </p>
     <ul role="list" class="link-card-grid">
       <Card
@@ -18,14 +16,14 @@ import Layout from '@/layouts/Layout.astro'
         body="Jelajahi konten dan informasi terkini tentang kami"
       />
       <Card
-        href="https://peacetival.ejpeace.my.id/"
-        title="Peacetival"
-        body="More than just Festival, "
-      />
-      <Card
         href="https://coffee.ejpeace.my.id/"
         title="EJPeace Coffee"
         body="Secangkir kopi dengan suasana yang tak tertandingi"
+      />
+      <Card
+        href="https://peacetival.ejpeace.my.id/"
+        title="Peacetival"
+        body="More than just Festival, "
       />
       <Card
         href="https://club.ejpeace.my.id/"
@@ -51,6 +49,8 @@ import Layout from '@/layouts/Layout.astro'
     font-size: 3rem;
     font-weight: 800;
     margin: 0;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   }
   .text-gradient {
     background-image: var(--accent-gradient);

@@ -31,7 +31,16 @@ const { title } = Astro.props
   }
   html {
     font-family: system-ui, sans-serif;
-    background-color: #f6f6f6;
+    background: linear-gradient(
+      135deg,
+      #667eea 0%,
+      #764ba2 25%,
+      #f093fb 50%,
+      #4facfe 75%,
+      #00f2fe 100%
+    );
+    background-attachment: fixed;
+    min-height: 100vh;
   }
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
