@@ -12,7 +12,7 @@ const sharedConfigs = {
 
 export default [
   {
-    ignores: ['.gitignore'],
+    ignores: ['.gitignore', '.astro/**', 'dist/**'],
     plugins: {
       'simple-import-sort': eslintSimpleImportSortPlugin,
     },

@@ -12,7 +12,7 @@ export default defineConfig({
   // Jika tidak ada → biarkan undefined (AMAN di Cloudflare)
   site: baseURL && baseURL !== '/' ? baseURL : undefined,
 
-  base: "/",
+  base: '/',
 
   integrations: [
     purgecss(),
