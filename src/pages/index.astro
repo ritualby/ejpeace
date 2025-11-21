@@ -3,9 +3,9 @@ import Card from '@/components/Card.astro'
 import Layout from '@/layouts/Layout.astro'
 ---
 
-<Layout title="Welcome to EJPeace.">
+<Layout title="Welcome to EJPeace">
   <main>
-    <h1>Welcome to <span class="text-gradient">EJPeace</span></h1>
+    <h1>Welcome to <span class="text-gold">EJPeace</span></h1>
     <p class="instructions">
       Kreatifitas tanpa batas bersama hiburan yang tak terlupakan.
     </p>
@@ -28,12 +28,12 @@ import Layout from '@/layouts/Layout.astro'
       <Card
         href="https://club.ejpeace.my.id/"
         title="Peace Club"
-        body="Come say hi to our amazing community. ❤️"
+        body="Come say hi to our amazing community ❤️"
       />
       <Card
         href="https://show.ejpeace.my.id/"
         title="Showpeace"
-        body="Sebuah ruang kreasi dan imajinasi bagi siapapun."
+        body="Panggung seni kreasi bagi siapapun yang ingin unjuk gigi"
       />
     </ul>
   </main>
@@ -52,12 +52,30 @@ import Layout from '@/layouts/Layout.astro'
     color: white;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   }
-  .text-gradient {
-    background-image: var(--accent-gradient);
+  .text-gold {
+    background: linear-gradient(
+      135deg,
+      #ffd700 0%,
+      #ffed4e 25%,
+      #ffd700 50%,
+      #ffb347 75%,
+      #ffd700 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
+    background-clip: text;
+    background-size: 200%;
+    animation: gold-shine 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5));
+  }
+  
+  @keyframes gold-shine {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
   }
   .instructions {
     line-height: 1.6;
