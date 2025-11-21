@@ -1,0 +1,437 @@
+---
+import Layout from '@/layouts/Layout.astro'
+---
+
+<Layout title="Peacetival - EJPeace">
+  <div class="peacetival-container">
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <div class="top-bar-blue">
+        <div class="status-left">
+          <span class="time">01:15</span>
+          <span class="icon">🛏️</span>
+        </div>
+        <div class="status-right">
+          <span class="signal">📶</span>
+          <span class="wifi">📶</span>
+          <span class="battery">79%</span>
+        </div>
+      </div>
+      <div class="top-bar-yellow">
+        <button class="menu-btn" aria-label="Menu">
+          <span class="hamburger">☰</span>
+        </button>
+        <div class="header-right">
+          <button class="cart-btn" aria-label="Cart">🛒</button>
+          <button class="user-btn" aria-label="User">👤</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-banner">
+        <div class="hero-left">
+          <div class="festival-number">
+            <span class="number">18</span>
+            <div class="flower">🌸</div>
+            <div class="sparkles">
+              <span class="sparkle">✨</span>
+              <span class="sparkle">✨</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-right">
+          <h1 class="festival-title">
+            SYNCHRONIZE :FEST
+            <span class="circular-arrow">↻</span>
+          </h1>
+          <div class="festival-year">TAHUN</div>
+        </div>
+      </div>
+      <div class="date-strip">
+        <span class="date-text">3.4.5 Oktober 2025</span>
+        <span class="date-dot">●</span>
+      </div>
+    </section>
+
+    <!-- Navigation Grid -->
+    <section class="nav-grid-section">
+      <div class="nav-grid">
+        <a href="#lineup" class="nav-item">
+          <div class="nav-icon">🎤</div>
+          <div class="nav-label">Line Up</div>
+        </a>
+        <a href="#rundown" class="nav-item">
+          <div class="nav-icon">📅</div>
+          <div class="nav-label">Rundown</div>
+        </a>
+        <a href="#venue" class="nav-item">
+          <div class="nav-icon">📍</div>
+          <div class="nav-label">Venue Map</div>
+        </a>
+        <a href="#ticket" class="nav-item">
+          <div class="nav-icon">🎫</div>
+          <div class="nav-label">Ticket</div>
+        </a>
+        <a href="#merch" class="nav-item">
+          <div class="nav-icon">👕</div>
+          <div class="nav-label">Merchandise</div>
+        </a>
+        <a href="#food" class="nav-item">
+          <div class="nav-icon">🍜</div>
+          <div class="nav-label">Foods & Drinks</div>
+        </a>
+        <a href="#radio" class="nav-item">
+          <div class="nav-icon">📻</div>
+          <div class="nav-label">Synchronize Radio</div>
+        </a>
+        <a href="#streaming" class="nav-item">
+          <div class="nav-icon">📺</div>
+          <div class="nav-label">Live Streaming</div>
+        </a>
+        <a href="#news" class="nav-item">
+          <div class="nav-icon">📰</div>
+          <div class="nav-label">News</div>
+        </a>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .peacetival-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f0f0f0;
+  }
+
+  /* Top Bar */
+  .top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+  }
+
+  .top-bar-blue {
+    background: #1e3a8a;
+    color: white;
+    padding: 0.25rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .status-left,
+  .status-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .top-bar-yellow {
+    background: #fbbf24;
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-btn,
+  .cart-btn,
+  .user-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: transform 0.2s;
+  }
+
+  .menu-btn:hover,
+  .cart-btn:hover,
+  .user-btn:hover {
+    transform: scale(1.1);
+  }
+
+  .header-right {
+    display: flex;
+    gap: 1rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    width: 100%;
+  }
+
+  .hero-banner {
+    background: #84cc16;
+    padding: 2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    min-height: 200px;
+  }
+
+  .hero-left {
+    flex-shrink: 0;
+  }
+
+  .festival-number {
+    position: relative;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #000;
+    line-height: 1;
+  }
+
+  .flower {
+    position: absolute;
+    top: -0.5rem;
+    right: -1rem;
+    font-size: 2rem;
+    transform: rotate(-15deg);
+  }
+
+  .sparkles {
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .sparkle {
+    font-size: 1rem;
+    animation: sparkle 2s ease-in-out infinite;
+  }
+
+  .sparkle:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+
+  @keyframes sparkle {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.2);
+    }
+  }
+
+  .hero-right {
+    flex: 1;
+    text-align: right;
+  }
+
+  .festival-title {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-weight: 900;
+    color: #000;
+    margin: 0;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+
+  .circular-arrow {
+    font-size: 0.8em;
+    display: inline-block;
+    animation: rotate 3s linear infinite;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .festival-year {
+    font-size: clamp(2rem, 8vw, 5rem);
+    font-weight: 900;
+    color: #000;
+    margin-top: 0.5rem;
+    line-height: 1;
+  }
+
+  .date-strip {
+    background: #ec4899;
+    color: white;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    font-size: clamp(1.25rem, 4vw, 2rem);
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .date-dot {
+    color: #1e3a8a;
+    font-size: 0.6em;
+  }
+
+  /* Navigation Grid */
+  .nav-grid-section {
+    background: #fbbf24;
+    padding: 2rem 1rem;
+    flex: 1;
+  }
+
+  .nav-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .nav-item {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 1rem;
+    padding: 1.5rem 1rem;
+    text-decoration: none;
+    color: #1e3a8a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    border: 2px solid transparent;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: #1e3a8a;
+    background: white;
+  }
+
+  .nav-item:active {
+    transform: translateY(-2px);
+  }
+
+  .nav-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  .nav-label {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .hero-banner {
+      padding: 3rem 2rem;
+      min-height: 250px;
+    }
+
+    .festival-number {
+      font-size: 6rem;
+    }
+
+    .flower {
+      font-size: 3rem;
+    }
+
+    .nav-grid {
+      gap: 1.5rem;
+      padding: 0 2rem;
+    }
+
+    .nav-item {
+      padding: 2rem 1.5rem;
+    }
+
+    .nav-icon {
+      font-size: 3rem;
+    }
+
+    .nav-label {
+      font-size: 1rem;
+    }
+
+    .date-strip {
+      padding: 1.5rem 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-banner {
+      padding: 4rem 3rem;
+      min-height: 300px;
+    }
+
+    .festival-number {
+      font-size: 8rem;
+    }
+
+    .nav-grid {
+      max-width: 1000px;
+      gap: 2rem;
+    }
+
+    .nav-item {
+      padding: 2.5rem 2rem;
+    }
+
+    .nav-icon {
+      font-size: 3.5rem;
+    }
+
+    .nav-label {
+      font-size: 1.125rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-banner {
+      flex-direction: column;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+
+    .hero-right {
+      text-align: center;
+    }
+
+    .festival-title {
+      justify-content: center;
+    }
+
+    .nav-grid {
+      gap: 0.75rem;
+    }
+
+    .nav-item {
+      padding: 1.25rem 0.75rem;
+    }
+
+    .nav-icon {
+      font-size: 2rem;
+    }
+
+    .nav-label {
+      font-size: 0.75rem;
+    }
+  }
+</style>
+
